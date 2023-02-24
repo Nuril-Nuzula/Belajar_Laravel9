@@ -17,6 +17,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('about', function() {
+    return view('about');
+});
+
+Route::get('/hello', function() {
+    $dataArray = [
+        'message' => 'Hello, World'
+    ];
+    // return $dataArray;
+    return response()->json($dataArray);
+});
+Route::get('/debug', function() {
+    $dataArray = [
+        'message' => 'Hello, world'
+    ];
+    // pake yg mana aja bebas (bawah) cuma yg ddd lebih bagus tampilannya
+    ddd(request());
+    dd($dataArray);
+});
 
 $taskList = [
     'first => Sleep',
