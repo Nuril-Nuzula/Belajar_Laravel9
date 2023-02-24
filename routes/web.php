@@ -38,15 +38,15 @@ Route::get('/debug', function() {
 });
 
 $taskList = [
-    'first => Sleep',
-    'second => Eat',
-    'third => Work',
+    'first' => 'Sleep',
+    'second' => 'Eat',
+    'third' => 'Work',
 ];
 
 Route::get('/tasks', function () use ($taskList) {
     return $taskList;
 });
 
-Route::get('/tasks/{param}', function ($param) {
-    return $param;
+Route::get('/tasks/{param}', function ($param) use ($taskList) {
+    return $taskList[$param];
 });
