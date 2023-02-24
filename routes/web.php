@@ -46,3 +46,7 @@ $taskList = [
 Route::get('/tasks', function () use ($taskList) {
     return $taskList;
 });
+
+Route::get('/tasks/{param}', function ($param) {
+    return $param;
+});
