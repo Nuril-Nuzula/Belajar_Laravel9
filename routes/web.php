@@ -43,6 +43,6 @@ $taskList = [
     'third => Work',
 ];
 
-Route::get('/task', function () use ($taskList) {
+Route::get('/tasks', function () use ($taskList) {
     return $taskList;
 });
